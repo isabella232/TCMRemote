@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net462</TargetFramework>
+    <Configurations>Debug;Release</Configurations>
+    <Version>9.0.0.0</Version>
+    <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <FileVersion>9.0.0.0</FileVersion>
+    <RootNamespace>Tridion.ContentManager.Automation</RootNamespace>
+    <AssemblyName>Tridion.ContentManager.Automation</AssemblyName>
+    <SignAssembly>true</SignAssembly>
+    <DelaySign>false</DelaySign>
+    <AssemblyOriginatorKeyFile>..\..\Tridion.ContentManager.Automation.snk</AssemblyOriginatorKeyFile>
+    <AssemblyTitle>"Tridion.ContentManager.Automation"</AssemblyTitle>
+    <Company>SDL Group</Company>
+    <Product>Tridion.ContentManager.Automation</Product>
+    <Description>Set of administration cmdlets that can be run from remote client.</Description>
+    <Copyright>Copyright 2018</Copyright>
+    <Authors>SDL Group</Authors>
+    <PackageIconUrl>http://dr0muzwhcp26z.cloudfront.net/static/corporate/SDL-logo-2014.png</PackageIconUrl>
+    <PackageLicenseUrl>https://community.sdl.com/developers/tridion_developer/w/wiki/864.sdl-web-developer-software-and-distribution-agreement</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/sdl/sites-automation</PackageProjectUrl>
+    <PackageReleaseNotes>Initial release of automation commandlets.</PackageReleaseNotes>
+    <PackageTags>SDL,CMDLets,Automation,Powershell</PackageTags>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Tridion.ContentManager.CoreService.Client" Version="9.0.0" />
+    <PackageReference Include="Tridion.Common" Version="9.0.0" />
+    <PackageReference Include="System.Management.Automation" Version="6.0.4" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.ServiceModel" />
+  </ItemGroup>
+</Project>

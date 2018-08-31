@@ -1,0 +1,3418 @@
+<?xml version="1.0"?>
+<ModuleObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Tridion.ContentManager.Automation</Name>
+  <ModuleType>Binary</ModuleType>
+  <Version>0.0.0.0</Version>
+  <Description />
+  <ModuleClass>Module</ModuleClass>
+  <UseSupports>false</UseSupports>
+  <OverridePostCount>false</OverridePostCount>
+  <FetchPostCount xsi:nil="true" />
+  <Cmdlets>
+    <CmdletObject>
+      <Name>Clear-TcmPublicationTarget</Name>
+      <Verb>Clear</Verb>
+      <Noun>TcmPublicationTarget</Noun>
+      <GeneralHelp>
+        <Synopsis>Decommissions the specified Publication Target.</Synopsis>
+        <Description>The Clear-TcmPublicationTarget cmdlet decommissions specified Publication Target.</Description>
+        <Notes />
+        <InputType />
+        <InputUrl />
+        <InputTypeDescription />
+        <ReturnType />
+        <ReturnUrl />
+        <ReturnTypeDescription />
+      </GeneralHelp>
+      <Syntax>
+        <string>Clear-TcmPublicationTarget [[-PublicationTargetIds] &lt;String[]&gt;] [-Server &lt;String&gt;] [-Port &lt;Int32&gt;] [-TimeOut &lt;Int32&gt;] [-InformationAction &lt;ActionPreference&gt;] [-InformationVariable &lt;String&gt;] [-WhatIf] [-Confirm]</string>
+      </Syntax>
+      <Parameters>
+        <ParameterDescription>
+          <Name>PublicationTargetIds</Name>
+          <Type>String[]</Type>
+          <AcceptsArray>true</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>true</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>true</Positional>
+          <Position>0</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>Sets TcmUri(s) of the one or more Publication Targets to decommission.</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>Server</Name>
+          <Type>String</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>The TCM server name of the remote server. It will be used as part of the CoreService URL net.tcp://{Server}:{Port}/CoreService/{Endpoint}</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>Port</Name>
+          <Type>Int32</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>The Port on which net.tcp endpoint is hosted. Default value is 2660. This value will be used as part of the CoreService URL net.tcp://{Server}:{Port}/CoreService/{Endpoint}</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>TimeOut</Name>
+          <Type>Int32</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>Sets the send and receive timeout (in minutes) of the Core Service NetTcp endpoint.</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>WhatIf</Name>
+          <Type>SwitchParameter</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.AliasAttribute</string>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases>
+            <string>wi</string>
+          </Aliases>
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>Confirm</Name>
+          <Type>SwitchParameter</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.AliasAttribute</string>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases>
+            <string>cf</string>
+          </Aliases>
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>WarningAction</Name>
+          <Type>actionpreference</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes />
+          <Aliases />
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>WarningVariable</Name>
+          <Type>string</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes />
+          <Aliases />
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>InformationAction</Name>
+          <Type>ActionPreference</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+            <string>System.Management.Automation.AliasAttribute</string>
+          </Attributes>
+          <Aliases>
+            <string>infa</string>
+          </Aliases>
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>InformationVariable</Name>
+          <Type>String</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+            <string>System.Management.Automation.AliasAttribute</string>
+            <string>System.Management.Automation.Internal.CommonParameters+ValidateVariableName</string>
+          </Attributes>
+          <Aliases>
+            <string>iv</string>
+          </Aliases>
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+      </Parameters>
+      <Examples />
+      <RelatedLinks />
+      <SupportInformation>
+        <ADChecked>false</ADChecked>
+        <RsatChecked>false</RsatChecked>
+        <Ps2Checked>false</Ps2Checked>
+        <Ps3Checked>false</Ps3Checked>
+        <Ps4Checked>false</Ps4Checked>
+        <WinXpChecked>false</WinXpChecked>
+        <WinVistaChecked>false</WinVistaChecked>
+        <Win7Checked>false</Win7Checked>
+        <Win8Checked>false</Win8Checked>
+        <Win81Checked>false</Win81Checked>
+        <Win2003Checked>false</Win2003Checked>
+        <Win2003StdChecked>false</Win2003StdChecked>
+        <Win2003EEChecked>false</Win2003EEChecked>
+        <Win2003DCChecked>false</Win2003DCChecked>
+        <Win2008Checked>false</Win2008Checked>
+        <Win2008StdChecked>false</Win2008StdChecked>
+        <Win2008EEChecked>false</Win2008EEChecked>
+        <Win2008DCChecked>false</Win2008DCChecked>
+        <Win2008R2Checked>false</Win2008R2Checked>
+        <Win2008R2StdChecked>false</Win2008R2StdChecked>
+        <Win2008R2EEChecked>false</Win2008R2EEChecked>
+        <Win2008R2DCChecked>false</Win2008R2DCChecked>
+        <Win2012Checked>false</Win2012Checked>
+        <Win2012StdChecked>false</Win2012StdChecked>
+        <Win2012DCChecked>false</Win2012DCChecked>
+        <Win2012R2Checked>false</Win2012R2Checked>
+        <Win2012R2StdChecked>false</Win2012R2StdChecked>
+        <Win2012R2DCChecked>false</Win2012R2DCChecked>
+      </SupportInformation>
+      <Publish>false</Publish>
+    </CmdletObject>
+    <CmdletObject>
+      <Name>Get-TcmApplicationIds</Name>
+      <Verb>Get</Verb>
+      <Noun>TcmApplicationIds</Noun>
+      <GeneralHelp>
+        <Synopsis>Gets a list of all SDL Web Content Manager application IDs for all application data stored in the system.</Synopsis>
+        <Description>The Get-TcmApplicationIds cmdlet gets all SDL Web Content Manager application IDs for all application data stored in the system.</Description>
+        <Notes />
+        <InputType />
+        <InputUrl />
+        <InputTypeDescription />
+        <ReturnType>System.String[]</ReturnType>
+        <ReturnUrl />
+        <ReturnTypeDescription>A collection of string values representing all application IDs.</ReturnTypeDescription>
+      </GeneralHelp>
+      <Syntax>
+        <string>Get-TcmApplicationIds [-Server &lt;String&gt;] [-Port &lt;Int32&gt;] [-TimeOut &lt;Int32&gt;] [-InformationAction &lt;ActionPreference&gt;] [-InformationVariable &lt;String&gt;]</string>
+      </Syntax>
+      <Parameters>
+        <ParameterDescription>
+          <Name>Server</Name>
+          <Type>String</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>The TCM server name of the remote server. It will be used as part of the CoreService URL net.tcp://{Server}:{Port}/CoreService/{Endpoint}</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>Port</Name>
+          <Type>Int32</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>The Port on which net.tcp endpoint is hosted. Default value is 2660. This value will be used as part of the CoreService URL net.tcp://{Server}:{Port}/CoreService/{Endpoint}</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>TimeOut</Name>
+          <Type>Int32</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>Sets the send and receive timeout (in minutes) of the Core Service NetTcp endpoint.</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>WarningAction</Name>
+          <Type>actionpreference</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes />
+          <Aliases />
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>WarningVariable</Name>
+          <Type>string</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes />
+          <Aliases />
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>InformationAction</Name>
+          <Type>ActionPreference</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+            <string>System.Management.Automation.AliasAttribute</string>
+          </Attributes>
+          <Aliases>
+            <string>infa</string>
+          </Aliases>
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>InformationVariable</Name>
+          <Type>String</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+            <string>System.Management.Automation.AliasAttribute</string>
+            <string>System.Management.Automation.Internal.CommonParameters+ValidateVariableName</string>
+          </Attributes>
+          <Aliases>
+            <string>iv</string>
+          </Aliases>
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+      </Parameters>
+      <Examples>
+        <Example>
+          <Name>Basic example</Name>
+          <Cmd>C:\PS&gt;Get-TcmApplicationIds</Cmd>
+          <Description>This command gets all SDL Web Content Manager application IDs for all application data stored in the system. If there are no application data stored in the system, this command returns to the command prompt without displaying anything.</Description>
+        </Example>
+      </Examples>
+      <RelatedLinks />
+      <SupportInformation>
+        <ADChecked>false</ADChecked>
+        <RsatChecked>false</RsatChecked>
+        <Ps2Checked>false</Ps2Checked>
+        <Ps3Checked>false</Ps3Checked>
+        <Ps4Checked>false</Ps4Checked>
+        <WinXpChecked>false</WinXpChecked>
+        <WinVistaChecked>false</WinVistaChecked>
+        <Win7Checked>false</Win7Checked>
+        <Win8Checked>false</Win8Checked>
+        <Win81Checked>false</Win81Checked>
+        <Win2003Checked>false</Win2003Checked>
+        <Win2003StdChecked>false</Win2003StdChecked>
+        <Win2003EEChecked>false</Win2003EEChecked>
+        <Win2003DCChecked>false</Win2003DCChecked>
+        <Win2008Checked>false</Win2008Checked>
+        <Win2008StdChecked>false</Win2008StdChecked>
+        <Win2008EEChecked>false</Win2008EEChecked>
+        <Win2008DCChecked>false</Win2008DCChecked>
+        <Win2008R2Checked>false</Win2008R2Checked>
+        <Win2008R2StdChecked>false</Win2008R2StdChecked>
+        <Win2008R2EEChecked>false</Win2008R2EEChecked>
+        <Win2008R2DCChecked>false</Win2008R2DCChecked>
+        <Win2012Checked>false</Win2012Checked>
+        <Win2012StdChecked>false</Win2012StdChecked>
+        <Win2012DCChecked>false</Win2012DCChecked>
+        <Win2012R2Checked>false</Win2012R2Checked>
+        <Win2012R2StdChecked>false</Win2012R2StdChecked>
+        <Win2012R2DCChecked>false</Win2012R2DCChecked>
+      </SupportInformation>
+      <Publish>false</Publish>
+    </CmdletObject>
+    <CmdletObject>
+      <Name>Get-TcmPublishTransaction</Name>
+      <Verb>Get</Verb>
+      <Noun>TcmPublishTransaction</Noun>
+      <GeneralHelp>
+        <Synopsis>Gets specific Publish Transaction or filtered list of Publish Transactions from the system.</Synopsis>
+        <Description>Gets specific Publish Transaction if Id parameter is specified. Otherwise, gets filtered or unfiltered list of Publish Transactions.</Description>
+        <Notes>User that has PublishManagement right in any publication or has administrative privilege can see Publish Transactions from all publications.</Notes>
+        <InputType />
+        <InputUrl />
+        <InputTypeDescription />
+        <ReturnType />
+        <ReturnUrl />
+        <ReturnTypeDescription />
+      </GeneralHelp>
+      <Syntax>
+        <string>Get-TcmPublishTransaction [-Id] &lt;String&gt; [-Server &lt;String&gt;] [-Port &lt;Int32&gt;] [-TimeOut &lt;Int32&gt;] [-InformationAction &lt;ActionPreference&gt;] [-InformationVariable &lt;String&gt;]</string>
+        <string>Get-TcmPublishTransaction [-PublisherHost &lt;String&gt;] [-IsCompleted &lt;Nullable`1[Boolean]&gt;] [-Server &lt;String&gt;] [-Port &lt;Int32&gt;] [-TimeOut &lt;Int32&gt;] [-InformationAction &lt;ActionPreference&gt;] [-InformationVariable &lt;String&gt;]</string>
+      </Syntax>
+      <Parameters>
+        <ParameterDescription>
+          <Name>Id</Name>
+          <Type>String</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>true</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>true</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>true</Positional>
+          <Position>0</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>TCM URI of the PublishTransaction.</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>Server</Name>
+          <Type>String</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>The TCM server name of the remote server. It will be used as part of the CoreService URL net.tcp://{Server}:{Port}/CoreService/{Endpoint}</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>Port</Name>
+          <Type>Int32</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>The Port on which net.tcp endpoint is hosted. Default value is 2660. This value will be used as part of the CoreService URL net.tcp://{Server}:{Port}/CoreService/{Endpoint}</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>TimeOut</Name>
+          <Type>Int32</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>Sets the send and receive timeout (in minutes) of the Core Service NetTcp endpoint.</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>PublisherHost</Name>
+          <Type>String</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>true</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>Optional. When specified, gets only those Publish Transactions which handling host name starts with this value.</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>IsCompleted</Name>
+          <Type>Nullable`1[Boolean]</Type>
+          <AcceptsArray>true</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>true</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>Optional. If true, gets only those Publish Transactions which are in one of the final states: Success, Failed, Warning, Undone, UndoFailed. If false, gets only those Publish Transactions which are not in one of the final state.</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>InformationAction</Name>
+          <Type>ActionPreference</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+            <string>System.Management.Automation.AliasAttribute</string>
+          </Attributes>
+          <Aliases>
+            <string>infa</string>
+          </Aliases>
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>InformationVariable</Name>
+          <Type>String</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+            <string>System.Management.Automation.AliasAttribute</string>
+            <string>System.Management.Automation.Internal.CommonParameters+ValidateVariableName</string>
+          </Attributes>
+          <Aliases>
+            <string>iv</string>
+          </Aliases>
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+      </Parameters>
+      <Examples />
+      <RelatedLinks />
+      <SupportInformation>
+        <ADChecked>false</ADChecked>
+        <RsatChecked>false</RsatChecked>
+        <Ps2Checked>false</Ps2Checked>
+        <Ps3Checked>false</Ps3Checked>
+        <Ps4Checked>false</Ps4Checked>
+        <WinXpChecked>false</WinXpChecked>
+        <WinVistaChecked>false</WinVistaChecked>
+        <Win7Checked>false</Win7Checked>
+        <Win8Checked>false</Win8Checked>
+        <Win81Checked>false</Win81Checked>
+        <Win2003Checked>false</Win2003Checked>
+        <Win2003StdChecked>false</Win2003StdChecked>
+        <Win2003EEChecked>false</Win2003EEChecked>
+        <Win2003DCChecked>false</Win2003DCChecked>
+        <Win2008Checked>false</Win2008Checked>
+        <Win2008StdChecked>false</Win2008StdChecked>
+        <Win2008EEChecked>false</Win2008EEChecked>
+        <Win2008DCChecked>false</Win2008DCChecked>
+        <Win2008R2Checked>false</Win2008R2Checked>
+        <Win2008R2StdChecked>false</Win2008R2StdChecked>
+        <Win2008R2EEChecked>false</Win2008R2EEChecked>
+        <Win2008R2DCChecked>false</Win2008R2DCChecked>
+        <Win2012Checked>false</Win2012Checked>
+        <Win2012StdChecked>false</Win2012StdChecked>
+        <Win2012DCChecked>false</Win2012DCChecked>
+        <Win2012R2Checked>false</Win2012R2Checked>
+        <Win2012R2StdChecked>false</Win2012R2StdChecked>
+        <Win2012R2DCChecked>false</Win2012R2DCChecked>
+      </SupportInformation>
+      <Publish>false</Publish>
+    </CmdletObject>
+    <CmdletObject>
+      <Name>Get-TcmQueueInfo</Name>
+      <Verb>Get</Verb>
+      <Noun>TcmQueueInfo</Noun>
+      <GeneralHelp>
+        <Synopsis>Gets a list of all SDL Web Content Manager queues.</Synopsis>
+        <Description>The Get-TcmQueueInfo cmdlet gets all queues which are configured in the SDL Web Content Manager.</Description>
+        <Notes />
+        <InputType />
+        <InputUrl />
+        <InputTypeDescription />
+        <ReturnType>QueueData[]</ReturnType>
+        <ReturnUrl />
+        <ReturnTypeDescription />
+      </GeneralHelp>
+      <Syntax>
+        <string>Get-TcmQueueInfo [-Server &lt;String&gt;] [-Port &lt;Int32&gt;] [-TimeOut &lt;Int32&gt;] [-InformationAction &lt;ActionPreference&gt;] [-InformationVariable &lt;String&gt;]</string>
+      </Syntax>
+      <Parameters>
+        <ParameterDescription>
+          <Name>Server</Name>
+          <Type>String</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>The TCM server name of the remote server. It will be used as part of the CoreService URL net.tcp://{Server}:{Port}/CoreService/{Endpoint}</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>Port</Name>
+          <Type>Int32</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>The Port on which net.tcp endpoint is hosted. Default value is 2660. This value will be used as part of the CoreService URL net.tcp://{Server}:{Port}/CoreService/{Endpoint}</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>TimeOut</Name>
+          <Type>Int32</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>InformationAction</Name>
+          <Type>ActionPreference</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+            <string>System.Management.Automation.AliasAttribute</string>
+          </Attributes>
+          <Aliases>
+            <string>infa</string>
+          </Aliases>
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>InformationVariable</Name>
+          <Type>String</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+            <string>System.Management.Automation.AliasAttribute</string>
+            <string>System.Management.Automation.Internal.CommonParameters+ValidateVariableName</string>
+          </Attributes>
+          <Aliases>
+            <string>iv</string>
+          </Aliases>
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+      </Parameters>
+      <Examples />
+      <RelatedLinks />
+      <SupportInformation>
+        <ADChecked>false</ADChecked>
+        <RsatChecked>false</RsatChecked>
+        <Ps2Checked>false</Ps2Checked>
+        <Ps3Checked>false</Ps3Checked>
+        <Ps4Checked>false</Ps4Checked>
+        <WinXpChecked>false</WinXpChecked>
+        <WinVistaChecked>false</WinVistaChecked>
+        <Win7Checked>false</Win7Checked>
+        <Win8Checked>false</Win8Checked>
+        <Win81Checked>false</Win81Checked>
+        <Win2003Checked>false</Win2003Checked>
+        <Win2003StdChecked>false</Win2003StdChecked>
+        <Win2003EEChecked>false</Win2003EEChecked>
+        <Win2003DCChecked>false</Win2003DCChecked>
+        <Win2008Checked>false</Win2008Checked>
+        <Win2008StdChecked>false</Win2008StdChecked>
+        <Win2008EEChecked>false</Win2008EEChecked>
+        <Win2008DCChecked>false</Win2008DCChecked>
+        <Win2008R2Checked>false</Win2008R2Checked>
+        <Win2008R2StdChecked>false</Win2008R2StdChecked>
+        <Win2008R2EEChecked>false</Win2008R2EEChecked>
+        <Win2008R2DCChecked>false</Win2008R2DCChecked>
+        <Win2012Checked>false</Win2012Checked>
+        <Win2012StdChecked>false</Win2012StdChecked>
+        <Win2012DCChecked>false</Win2012DCChecked>
+        <Win2012R2Checked>false</Win2012R2Checked>
+        <Win2012R2StdChecked>false</Win2012R2StdChecked>
+        <Win2012R2DCChecked>false</Win2012R2DCChecked>
+      </SupportInformation>
+      <Publish>false</Publish>
+    </CmdletObject>
+    <CmdletObject>
+      <Name>Get-TcmRepository</Name>
+      <Verb>Get</Verb>
+      <Noun>TcmRepository</Noun>
+      <GeneralHelp>
+        <Synopsis>Gets the repositories from the system. If Ids are not specified then all repositories will be returned.</Synopsis>
+        <Description>The cmdlet Get-TcmRepository gets the repositories from the system. If Ids are not specified then all repositories will be returned.</Description>
+        <Notes />
+        <InputType />
+        <InputUrl />
+        <InputTypeDescription />
+        <ReturnType>IEnumerable&lt;RepositoryData&gt;</ReturnType>
+        <ReturnUrl />
+        <ReturnTypeDescription>List of Tridion.ContentManager.CoreService.Client.RepositoryData objects. RepositoryData represents the data of a Repository.</ReturnTypeDescription>
+      </GeneralHelp>
+      <Syntax>
+        <string>Get-TcmRepository [[-Ids] &lt;String[]&gt;] [-Server &lt;String&gt;] [-Port &lt;Int32&gt;] [-TimeOut &lt;Int32&gt;] [-InformationAction &lt;ActionPreference&gt;] [-InformationVariable &lt;String&gt;]</string>
+      </Syntax>
+      <Parameters>
+        <ParameterDescription>
+          <Name>Ids</Name>
+          <Type>String[]</Type>
+          <AcceptsArray>true</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>true</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>true</Positional>
+          <Position>0</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>Specifies one or more repository by id.</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>Server</Name>
+          <Type>String</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>The TCM server name of the remote server. It will be used as part of the CoreService URL net.tcp://{Server}:{Port}/CoreService/{Endpoint}</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>Port</Name>
+          <Type>Int32</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>The Port on which net.tcp endpoint is hosted. Default value is 2660. This value will be used as part of the CoreService URL net.tcp://{Server}:{Port}/CoreService/{Endpoint}</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>TimeOut</Name>
+          <Type>Int32</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>Sets the send and receive timeout (in minutes) of the Core Service NetTcp endpoint.</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>WarningAction</Name>
+          <Type>actionpreference</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes />
+          <Aliases />
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>WarningVariable</Name>
+          <Type>string</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes />
+          <Aliases />
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>InformationAction</Name>
+          <Type>ActionPreference</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+            <string>System.Management.Automation.AliasAttribute</string>
+          </Attributes>
+          <Aliases>
+            <string>infa</string>
+          </Aliases>
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>InformationVariable</Name>
+          <Type>String</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+            <string>System.Management.Automation.AliasAttribute</string>
+            <string>System.Management.Automation.Internal.CommonParameters+ValidateVariableName</string>
+          </Attributes>
+          <Aliases>
+            <string>iv</string>
+          </Aliases>
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+      </Parameters>
+      <Examples />
+      <RelatedLinks />
+      <SupportInformation>
+        <ADChecked>false</ADChecked>
+        <RsatChecked>false</RsatChecked>
+        <Ps2Checked>false</Ps2Checked>
+        <Ps3Checked>false</Ps3Checked>
+        <Ps4Checked>false</Ps4Checked>
+        <WinXpChecked>false</WinXpChecked>
+        <WinVistaChecked>false</WinVistaChecked>
+        <Win7Checked>false</Win7Checked>
+        <Win8Checked>false</Win8Checked>
+        <Win81Checked>false</Win81Checked>
+        <Win2003Checked>false</Win2003Checked>
+        <Win2003StdChecked>false</Win2003StdChecked>
+        <Win2003EEChecked>false</Win2003EEChecked>
+        <Win2003DCChecked>false</Win2003DCChecked>
+        <Win2008Checked>false</Win2008Checked>
+        <Win2008StdChecked>false</Win2008StdChecked>
+        <Win2008EEChecked>false</Win2008EEChecked>
+        <Win2008DCChecked>false</Win2008DCChecked>
+        <Win2008R2Checked>false</Win2008R2Checked>
+        <Win2008R2StdChecked>false</Win2008R2StdChecked>
+        <Win2008R2EEChecked>false</Win2008R2EEChecked>
+        <Win2008R2DCChecked>false</Win2008R2DCChecked>
+        <Win2012Checked>false</Win2012Checked>
+        <Win2012StdChecked>false</Win2012StdChecked>
+        <Win2012DCChecked>false</Win2012DCChecked>
+        <Win2012R2Checked>false</Win2012R2Checked>
+        <Win2012R2StdChecked>false</Win2012R2StdChecked>
+        <Win2012R2DCChecked>false</Win2012R2DCChecked>
+      </SupportInformation>
+      <Publish>false</Publish>
+    </CmdletObject>
+    <CmdletObject>
+      <Name>Remove-TcmApplicationData</Name>
+      <Verb>Remove</Verb>
+      <Noun>TcmApplicationData</Noun>
+      <GeneralHelp>
+        <Synopsis>Deletes all application data from the system for the specified application identifier.</Synopsis>
+        <Description>The Remove-TcmApplicationData allows to delete all application data from the system for the specified application identifiers. It operates on the local Content Manager installation and under current operating system user.
+User must be System Administrator, if not - PermissionDenied exception will occur.
+You need to confirm an execution of this operation.</Description>
+        <Notes>Deletes all (global and subject related) application data for a given application ID.  Typical usecase of this method is a clean up of all application data left by some application which was uninstalled.</Notes>
+        <InputType>System.String[]</InputType>
+        <InputUrl />
+        <InputTypeDescription>You can pipe a string array that contains Application identifiers for which purging application data process must be performed.</InputTypeDescription>
+        <ReturnType />
+        <ReturnUrl />
+        <ReturnTypeDescription />
+      </GeneralHelp>
+      <Syntax>
+        <string>Remove-TcmApplicationData [-TcmApplicationIds] &lt;String[]&gt; [-Server &lt;String&gt;] [-Port &lt;Int32&gt;] [-TimeOut &lt;Int32&gt;] [-InformationAction &lt;ActionPreference&gt;] [-InformationVariable &lt;String&gt;] [-WhatIf] [-Confirm]</string>
+      </Syntax>
+      <Parameters>
+        <ParameterDescription>
+          <Name>TcmApplicationIds</Name>
+          <Type>String[]</Type>
+          <AcceptsArray>true</AcceptsArray>
+          <Mandatory>true</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>true</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>true</Positional>
+          <Position>0</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>Application identifiers for which purging application data process must be preformed.</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>Server</Name>
+          <Type>String</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>The TCM server name of the remote server. It will be used as part of the CoreService URL net.tcp://{Server}:{Port}/CoreService/{Endpoint}</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>Port</Name>
+          <Type>Int32</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>The Port on which net.tcp endpoint is hosted. Default value is 2660. This value will be used as part of the CoreService URL net.tcp://{Server}:{Port}/CoreService/{Endpoint}</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>TimeOut</Name>
+          <Type>Int32</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>Sets the send and receive timeout (in minutes) of the Core Service NetTcp endpoint.</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>WhatIf</Name>
+          <Type>SwitchParameter</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.AliasAttribute</string>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases>
+            <string>wi</string>
+          </Aliases>
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>Confirm</Name>
+          <Type>SwitchParameter</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.AliasAttribute</string>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases>
+            <string>cf</string>
+          </Aliases>
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>WarningAction</Name>
+          <Type>actionpreference</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes />
+          <Aliases />
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>WarningVariable</Name>
+          <Type>string</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes />
+          <Aliases />
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>InformationAction</Name>
+          <Type>ActionPreference</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+            <string>System.Management.Automation.AliasAttribute</string>
+          </Attributes>
+          <Aliases>
+            <string>infa</string>
+          </Aliases>
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>InformationVariable</Name>
+          <Type>String</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+            <string>System.Management.Automation.AliasAttribute</string>
+            <string>System.Management.Automation.Internal.CommonParameters+ValidateVariableName</string>
+          </Attributes>
+          <Aliases>
+            <string>iv</string>
+          </Aliases>
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+      </Parameters>
+      <Examples>
+        <Example>
+          <Name>Basic example</Name>
+          <Cmd>C:\PS&gt;Remove-TcmApplicationData cme:UserPreferences</Cmd>
+          <Description>Deletes all (global and subject related) application data for the "cme:UserPreferences" application ID. This command returns to the command prompt without displaying anything.</Description>
+        </Example>
+      </Examples>
+      <RelatedLinks />
+      <SupportInformation>
+        <ADChecked>false</ADChecked>
+        <RsatChecked>false</RsatChecked>
+        <Ps2Checked>false</Ps2Checked>
+        <Ps3Checked>false</Ps3Checked>
+        <Ps4Checked>false</Ps4Checked>
+        <WinXpChecked>false</WinXpChecked>
+        <WinVistaChecked>false</WinVistaChecked>
+        <Win7Checked>false</Win7Checked>
+        <Win8Checked>false</Win8Checked>
+        <Win81Checked>false</Win81Checked>
+        <Win2003Checked>false</Win2003Checked>
+        <Win2003StdChecked>false</Win2003StdChecked>
+        <Win2003EEChecked>false</Win2003EEChecked>
+        <Win2003DCChecked>false</Win2003DCChecked>
+        <Win2008Checked>false</Win2008Checked>
+        <Win2008StdChecked>false</Win2008StdChecked>
+        <Win2008EEChecked>false</Win2008EEChecked>
+        <Win2008DCChecked>false</Win2008DCChecked>
+        <Win2008R2Checked>false</Win2008R2Checked>
+        <Win2008R2StdChecked>false</Win2008R2StdChecked>
+        <Win2008R2EEChecked>false</Win2008R2EEChecked>
+        <Win2008R2DCChecked>false</Win2008R2DCChecked>
+        <Win2012Checked>false</Win2012Checked>
+        <Win2012StdChecked>false</Win2012StdChecked>
+        <Win2012DCChecked>false</Win2012DCChecked>
+        <Win2012R2Checked>false</Win2012R2Checked>
+        <Win2012R2StdChecked>false</Win2012R2StdChecked>
+        <Win2012R2DCChecked>false</Win2012R2DCChecked>
+      </SupportInformation>
+      <Publish>false</Publish>
+    </CmdletObject>
+    <CmdletObject>
+      <Name>Remove-TcmBatches</Name>
+      <Verb>Remove</Verb>
+      <Noun>TcmBatches</Noun>
+      <GeneralHelp>
+        <Synopsis>Deletes SDL Web Content Manager batches</Synopsis>
+        <Description>The Remove-TcmBatches cmdlet allows to remove SDL Web Content Manager Batches. If User is System Administrator he can purge all batches, otherwise only his own bathes.
+You need to confirm an execution of this operation.</Description>
+        <Notes />
+        <InputType />
+        <InputUrl />
+        <InputTypeDescription />
+        <ReturnType>Tridion.ContentManager.CoreService.Client.BatchData</ReturnType>
+        <ReturnUrl />
+        <ReturnTypeDescription>Represents data of a Batch. Defines batch operations and additional info related to batch invocation.</ReturnTypeDescription>
+      </GeneralHelp>
+      <Syntax>
+        <string>Remove-TcmBatches [-All] [-Server &lt;String&gt;] [-Port &lt;Int32&gt;] [-TimeOut &lt;Int32&gt;] [-InformationAction &lt;ActionPreference&gt;] [-InformationVariable &lt;String&gt;] [-WhatIf] [-Confirm]</string>
+      </Syntax>
+      <Parameters>
+        <ParameterDescription>
+          <Name>All</Name>
+          <Type>SwitchParameter</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>If -All switch is specified, it will delete all batches, otherwise only completed.</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>Server</Name>
+          <Type>String</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>The TCM server name of the remote server. It will be used as part of the CoreService URL net.tcp://{Server}:{Port}/CoreService/{Endpoint}</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>Port</Name>
+          <Type>Int32</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>The Port on which net.tcp endpoint is hosted. Default value is 2660. This value will be used as part of the CoreService URL net.tcp://{Server}:{Port}/CoreService/{Endpoint}</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>TimeOut</Name>
+          <Type>Int32</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>Sets the send and receive timeout (in minutes) of the Core Service NetTcp endpoint.</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>WhatIf</Name>
+          <Type>SwitchParameter</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.AliasAttribute</string>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases>
+            <string>wi</string>
+          </Aliases>
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>Confirm</Name>
+          <Type>SwitchParameter</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.AliasAttribute</string>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases>
+            <string>cf</string>
+          </Aliases>
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>WarningAction</Name>
+          <Type>actionpreference</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes />
+          <Aliases />
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>WarningVariable</Name>
+          <Type>string</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes />
+          <Aliases />
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>InformationAction</Name>
+          <Type>ActionPreference</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+            <string>System.Management.Automation.AliasAttribute</string>
+          </Attributes>
+          <Aliases>
+            <string>infa</string>
+          </Aliases>
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>InformationVariable</Name>
+          <Type>String</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+            <string>System.Management.Automation.AliasAttribute</string>
+            <string>System.Management.Automation.Internal.CommonParameters+ValidateVariableName</string>
+          </Attributes>
+          <Aliases>
+            <string>iv</string>
+          </Aliases>
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+      </Parameters>
+      <Examples>
+        <Example>
+          <Name>Basic example</Name>
+          <Cmd>Remove-TcmBatches -All</Cmd>
+          <Description>Deletes all SDL Web Content Manager Batches.</Description>
+        </Example>
+      </Examples>
+      <RelatedLinks />
+      <SupportInformation>
+        <ADChecked>false</ADChecked>
+        <RsatChecked>false</RsatChecked>
+        <Ps2Checked>false</Ps2Checked>
+        <Ps3Checked>false</Ps3Checked>
+        <Ps4Checked>false</Ps4Checked>
+        <WinXpChecked>false</WinXpChecked>
+        <WinVistaChecked>false</WinVistaChecked>
+        <Win7Checked>false</Win7Checked>
+        <Win8Checked>false</Win8Checked>
+        <Win81Checked>false</Win81Checked>
+        <Win2003Checked>false</Win2003Checked>
+        <Win2003StdChecked>false</Win2003StdChecked>
+        <Win2003EEChecked>false</Win2003EEChecked>
+        <Win2003DCChecked>false</Win2003DCChecked>
+        <Win2008Checked>false</Win2008Checked>
+        <Win2008StdChecked>false</Win2008StdChecked>
+        <Win2008EEChecked>false</Win2008EEChecked>
+        <Win2008DCChecked>false</Win2008DCChecked>
+        <Win2008R2Checked>false</Win2008R2Checked>
+        <Win2008R2StdChecked>false</Win2008R2StdChecked>
+        <Win2008R2EEChecked>false</Win2008R2EEChecked>
+        <Win2008R2DCChecked>false</Win2008R2DCChecked>
+        <Win2012Checked>false</Win2012Checked>
+        <Win2012StdChecked>false</Win2012StdChecked>
+        <Win2012DCChecked>false</Win2012DCChecked>
+        <Win2012R2Checked>false</Win2012R2Checked>
+        <Win2012R2StdChecked>false</Win2012R2StdChecked>
+        <Win2012R2DCChecked>false</Win2012R2DCChecked>
+      </SupportInformation>
+      <Publish>false</Publish>
+    </CmdletObject>
+    <CmdletObject>
+      <Name>Remove-TcmItemsOldVersions</Name>
+      <Verb>Remove</Verb>
+      <Noun>TcmItemsOldVersions</Noun>
+      <GeneralHelp>
+        <Synopsis>Purges old versions of SDL Web Content Manager items.</Synopsis>
+        <Description>The Remove-TcmItemsOldVersions cmdlet allows to remove old versions of items from the Content Manager database based on criteria's specified in parameters.
+Cmdlet scans and purges versions of the following types of Content Manager items: Components, Component Templates, Pages Page Templates, Schemas, Template Building Blocks.
+Cmdlet never deletes: versions of items that are currently checked out, the current (latest) version of an item.
+User must be System Administrator, if not - PermissionDenied exception will occur.
+You need to confirm an execution of this operation.</Description>
+        <Notes>If you use the TOM-based Event System, note that the OnDeleteVersion method  is triggered when any version of an item is deleted. If you have implemented an event handler for the OnDeleteVersion event, this event handler must be capable of being triggered for older versions without crashing or causing any loss of data or functionality.</Notes>
+        <InputType />
+        <InputUrl />
+        <InputTypeDescription />
+        <ReturnType>System.Int32</ReturnType>
+        <ReturnUrl />
+        <ReturnTypeDescription>The count of purged versions.</ReturnTypeDescription>
+      </GeneralHelp>
+      <Syntax>
+        <string>Remove-TcmItemsOldVersions [-ContainerItemIds] &lt;String[]&gt; [-VersionsToKeep &lt;UInt32&gt;] [-KeepAfter &lt;Nullable`1[DateTime]&gt;] [-KeepWithinDaysBefore &lt;UInt32&gt;] [-Recursive] [-MaxResolvedItemsCount &lt;UInt32&gt;] [-Server &lt;String&gt;] [-Port &lt;Int32&gt;] [-TimeOut &lt;Int32&gt;] [-InformationAction &lt;ActionPreference&gt;] [-InformationVariable &lt;String&gt;] [-WhatIf] [-Confirm]</string>
+      </Syntax>
+      <Parameters>
+        <ParameterDescription>
+          <Name>ContainerItemIds</Name>
+          <Type>String[]</Type>
+          <AcceptsArray>true</AcceptsArray>
+          <Mandatory>true</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>true</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>true</Positional>
+          <Position>0</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>List of publication or/and organizational item identifiers (TCM URI or WebDAV URL) in which a purging process will be performed.</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>VersionsToKeep</Name>
+          <Type>UInt32</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>The number of most recent versions to keep. Note that the current version is always kept.</Description>
+          <DefaultValue>0</DefaultValue>
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>KeepAfter</Name>
+          <Type>Nullable`1[DateTime]</Type>
+          <AcceptsArray>true</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>The date before which all versions are purged.</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>KeepWithinDaysBefore</Name>
+          <Type>UInt32</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>Versions created during the specified number of days from now (backward) are kept.</Description>
+          <DefaultValue>0</DefaultValue>
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>Recursive</Name>
+          <Type>SwitchParameter</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>If it is specified, the purge will be performed in nested organizational items, otherwise not.</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>MaxResolvedItemsCount</Name>
+          <Type>UInt32</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>The maximum number of versioned items which we can select for purging.</Description>
+          <DefaultValue>100000</DefaultValue>
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>Server</Name>
+          <Type>String</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>The TCM server name of the remote server. It will be used as part of the CoreService URL net.tcp://{Server}:{Port}/CoreService/{Endpoint}</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>Port</Name>
+          <Type>Int32</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>The Port on which net.tcp endpoint is hosted. Default value is 2660. This value will be used as part of the CoreService URL net.tcp://{Server}:{Port}/CoreService/{Endpoint}</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>TimeOut</Name>
+          <Type>Int32</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>Sets the send and receive timeout (in minutes) of the Core Service NetTcp endpoint.</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>WhatIf</Name>
+          <Type>SwitchParameter</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.AliasAttribute</string>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases>
+            <string>wi</string>
+          </Aliases>
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>Confirm</Name>
+          <Type>SwitchParameter</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.AliasAttribute</string>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases>
+            <string>cf</string>
+          </Aliases>
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>WarningAction</Name>
+          <Type>actionpreference</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes />
+          <Aliases />
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>WarningVariable</Name>
+          <Type>string</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes />
+          <Aliases />
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>InformationAction</Name>
+          <Type>ActionPreference</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+            <string>System.Management.Automation.AliasAttribute</string>
+          </Attributes>
+          <Aliases>
+            <string>infa</string>
+          </Aliases>
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>InformationVariable</Name>
+          <Type>String</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+            <string>System.Management.Automation.AliasAttribute</string>
+            <string>System.Management.Automation.Internal.CommonParameters+ValidateVariableName</string>
+          </Attributes>
+          <Aliases>
+            <string>iv</string>
+          </Aliases>
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+      </Parameters>
+      <Examples>
+        <Example>
+          <Name>Basic example</Name>
+          <Cmd>C:\PS&gt;Remove-TcmItemsOldVersions -ContainerItemIds tcm:0-8-1,tcm:0-37-1 -VersionsToKeep 2 -Recursive -KeepWithinDaysBefore 0</Cmd>
+          <Description>Remove all items from tcm:0-8-1 and tcm:0-37-1 and nested organizational items. Keep only two last versions.</Description>
+        </Example>
+      </Examples>
+      <RelatedLinks />
+      <SupportInformation>
+        <ADChecked>false</ADChecked>
+        <RsatChecked>false</RsatChecked>
+        <Ps2Checked>false</Ps2Checked>
+        <Ps3Checked>false</Ps3Checked>
+        <Ps4Checked>false</Ps4Checked>
+        <WinXpChecked>false</WinXpChecked>
+        <WinVistaChecked>false</WinVistaChecked>
+        <Win7Checked>false</Win7Checked>
+        <Win8Checked>false</Win8Checked>
+        <Win81Checked>false</Win81Checked>
+        <Win2003Checked>false</Win2003Checked>
+        <Win2003StdChecked>false</Win2003StdChecked>
+        <Win2003EEChecked>false</Win2003EEChecked>
+        <Win2003DCChecked>false</Win2003DCChecked>
+        <Win2008Checked>false</Win2008Checked>
+        <Win2008StdChecked>false</Win2008StdChecked>
+        <Win2008EEChecked>false</Win2008EEChecked>
+        <Win2008DCChecked>false</Win2008DCChecked>
+        <Win2008R2Checked>false</Win2008R2Checked>
+        <Win2008R2StdChecked>false</Win2008R2StdChecked>
+        <Win2008R2EEChecked>false</Win2008R2EEChecked>
+        <Win2008R2DCChecked>false</Win2008R2DCChecked>
+        <Win2012Checked>false</Win2012Checked>
+        <Win2012StdChecked>false</Win2012StdChecked>
+        <Win2012DCChecked>false</Win2012DCChecked>
+        <Win2012R2Checked>false</Win2012R2Checked>
+        <Win2012R2StdChecked>false</Win2012R2StdChecked>
+        <Win2012R2DCChecked>false</Win2012R2DCChecked>
+      </SupportInformation>
+      <Publish>false</Publish>
+    </CmdletObject>
+    <CmdletObject>
+      <Name>Remove-TcmProcessHistories</Name>
+      <Verb>Remove</Verb>
+      <Noun>TcmProcessHistories</Noun>
+      <GeneralHelp>
+        <Synopsis>Purges old Workflow Process History items.</Synopsis>
+        <Description>To delete process histories after a specific date, put the date in the -Before parameter. If it is not specified - purge process will be performed for all process history items.
+To delete process histories from specific publication, put publication id in the -PublicationId parameter. If it is not specified - purge process will be performed for all process history items.
+An executed command returns ProcessHistoryData objects of deleted items one-by-one.
+User must be System Administrator, if not - PermissionDenied exception will occur.
+You need to confirm an execution of this operation.</Description>
+        <Notes />
+        <InputType />
+        <InputUrl />
+        <InputTypeDescription />
+        <ReturnType>Tridion.ContentManager.CoreService.Client.ProcessHistoryData</ReturnType>
+        <ReturnUrl />
+        <ReturnTypeDescription>Representing data of TCM Process History.</ReturnTypeDescription>
+      </GeneralHelp>
+      <Syntax>
+        <string>Remove-TcmProcessHistories [-Before &lt;Nullable`1[DateTime]&gt;] [-PublicationId &lt;String&gt;] [-Server &lt;String&gt;] [-Port &lt;Int32&gt;] [-TimeOut &lt;Int32&gt;] [-InformationAction &lt;ActionPreference&gt;] [-InformationVariable &lt;String&gt;] [-WhatIf] [-Confirm]</string>
+      </Syntax>
+      <Parameters>
+        <ParameterDescription>
+          <Name>Before</Name>
+          <Type>Nullable`1[DateTime]</Type>
+          <AcceptsArray>true</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>Determines a date before which process histories will be purged. If it is not specified - the purge process will be performed for all process histories items.</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>Server</Name>
+          <Type>String</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>The TCM server name of the remote server. It will be used as part of the CoreService URL net.tcp://{Server}:{Port}/CoreService/{Endpoint}</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>Port</Name>
+          <Type>Int32</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>The Port on which net.tcp endpoint is hosted. Default value is 2660. This value will be used as part of the CoreService URL net.tcp://{Server}:{Port}/CoreService/{Endpoint}</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>TimeOut</Name>
+          <Type>Int32</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>Sets the send and receive timeout (in minutes) of the Core Service NetTcp endpoint.</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>WhatIf</Name>
+          <Type>SwitchParameter</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.AliasAttribute</string>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases>
+            <string>wi</string>
+          </Aliases>
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>Confirm</Name>
+          <Type>SwitchParameter</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.AliasAttribute</string>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases>
+            <string>cf</string>
+          </Aliases>
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>WarningAction</Name>
+          <Type>actionpreference</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes />
+          <Aliases />
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>WarningVariable</Name>
+          <Type>string</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes />
+          <Aliases />
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>PublicationId</Name>
+          <Type>String</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>Determines publication where process histories will be purged. If it is not specified - the purge process will be performed for all process histories items.</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>InformationAction</Name>
+          <Type>ActionPreference</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+            <string>System.Management.Automation.AliasAttribute</string>
+          </Attributes>
+          <Aliases>
+            <string>infa</string>
+          </Aliases>
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>InformationVariable</Name>
+          <Type>String</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+            <string>System.Management.Automation.AliasAttribute</string>
+            <string>System.Management.Automation.Internal.CommonParameters+ValidateVariableName</string>
+          </Attributes>
+          <Aliases>
+            <string>iv</string>
+          </Aliases>
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+      </Parameters>
+      <Examples>
+        <Example>
+          <Name>Basic example</Name>
+          <Cmd>C:\PS&gt;Remove-TcmProcessHistories -Before 02.06.2012</Cmd>
+          <Description>Remove all process histories items that are finished before 02.06.2012</Description>
+        </Example>
+      </Examples>
+      <RelatedLinks />
+      <SupportInformation>
+        <ADChecked>false</ADChecked>
+        <RsatChecked>false</RsatChecked>
+        <Ps2Checked>false</Ps2Checked>
+        <Ps3Checked>false</Ps3Checked>
+        <Ps4Checked>false</Ps4Checked>
+        <WinXpChecked>false</WinXpChecked>
+        <WinVistaChecked>false</WinVistaChecked>
+        <Win7Checked>false</Win7Checked>
+        <Win8Checked>false</Win8Checked>
+        <Win81Checked>false</Win81Checked>
+        <Win2003Checked>false</Win2003Checked>
+        <Win2003StdChecked>false</Win2003StdChecked>
+        <Win2003EEChecked>false</Win2003EEChecked>
+        <Win2003DCChecked>false</Win2003DCChecked>
+        <Win2008Checked>false</Win2008Checked>
+        <Win2008StdChecked>false</Win2008StdChecked>
+        <Win2008EEChecked>false</Win2008EEChecked>
+        <Win2008DCChecked>false</Win2008DCChecked>
+        <Win2008R2Checked>false</Win2008R2Checked>
+        <Win2008R2StdChecked>false</Win2008R2StdChecked>
+        <Win2008R2EEChecked>false</Win2008R2EEChecked>
+        <Win2008R2DCChecked>false</Win2008R2DCChecked>
+        <Win2012Checked>false</Win2012Checked>
+        <Win2012StdChecked>false</Win2012StdChecked>
+        <Win2012DCChecked>false</Win2012DCChecked>
+        <Win2012R2Checked>false</Win2012R2Checked>
+        <Win2012R2StdChecked>false</Win2012R2StdChecked>
+        <Win2012R2DCChecked>false</Win2012R2DCChecked>
+      </SupportInformation>
+      <Publish>false</Publish>
+    </CmdletObject>
+    <CmdletObject>
+      <Name>Remove-TcmPublishTransactions</Name>
+      <Verb>Remove</Verb>
+      <Noun>TcmPublishTransactions</Noun>
+      <GeneralHelp>
+        <Synopsis>Deletes SDL Web Content Management Publish Transactions</Synopsis>
+        <Description>The Remove-TcmPublishTransactions cmdlet allows to delete finished SDL Web Content Management PublishTransaction objects.
+You can specify the parameters to constraint purging process, if no parameter is specified then all finished transactions will be purged. To purge publication transactions that have finished successfully, use  -Successful switch. To purge publish transactions that did not finish successfully, use -Failed switch. To specify the date before which the publish transactions will be purged, use -Before parameter.
+If User is System Administrator he can purge all finished Publish Transaction items, otherwise only his own items.
+Command execution returns Tridion.ContentManager.CoreService.Client.PublishTransactionData objects of deleted items one-by-one.
+You need to confirm an execution of this operation.</Description>
+        <Notes />
+        <InputType />
+        <InputUrl />
+        <InputTypeDescription />
+        <ReturnType>Tridion.ContentManager.CoreService.Client.PublishTransactionData</ReturnType>
+        <ReturnUrl />
+        <ReturnTypeDescription>Represents the data object of a PublishTransaction.</ReturnTypeDescription>
+      </GeneralHelp>
+      <Syntax>
+        <string>Remove-TcmPublishTransactions [-Successful] [-Failed] [-Before &lt;Nullable`1[DateTime]&gt;] [-Server &lt;String&gt;] [-Port &lt;Int32&gt;] [-TimeOut &lt;Int32&gt;] [-InformationAction &lt;ActionPreference&gt;] [-InformationVariable &lt;String&gt;] [-WhatIf] [-Confirm]</string>
+      </Syntax>
+      <Parameters>
+        <ParameterDescription>
+          <Name>Successful</Name>
+          <Type>SwitchParameter</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>If this switch is specified, the deleting will occur for successful transactions.</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>Failed</Name>
+          <Type>SwitchParameter</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>If this switch is specified, the deleting will occur for failed transactions.</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>Before</Name>
+          <Type>Nullable`1[DateTime]</Type>
+          <AcceptsArray>true</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>Delete publish transactions that were completed before this date, if it is not specified - a purge process will be performed for all publish transactions</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>Server</Name>
+          <Type>String</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>The TCM server name of the remote server. It will be used as part of the CoreService URL net.tcp://{Server}:{Port}/CoreService/{Endpoint}</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>Port</Name>
+          <Type>Int32</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>The Port on which net.tcp endpoint is hosted. Default value is 2660. This value will be used as part of the CoreService URL net.tcp://{Server}:{Port}/CoreService/{Endpoint}</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>TimeOut</Name>
+          <Type>Int32</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>Sets the send and receive timeout (in minutes) of the Core Service NetTcp endpoint.</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>WhatIf</Name>
+          <Type>SwitchParameter</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.AliasAttribute</string>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases>
+            <string>wi</string>
+          </Aliases>
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>Confirm</Name>
+          <Type>SwitchParameter</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.AliasAttribute</string>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases>
+            <string>cf</string>
+          </Aliases>
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>WarningAction</Name>
+          <Type>actionpreference</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes />
+          <Aliases />
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>WarningVariable</Name>
+          <Type>string</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes />
+          <Aliases />
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>InformationAction</Name>
+          <Type>ActionPreference</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+            <string>System.Management.Automation.AliasAttribute</string>
+          </Attributes>
+          <Aliases>
+            <string>infa</string>
+          </Aliases>
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>InformationVariable</Name>
+          <Type>String</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+            <string>System.Management.Automation.AliasAttribute</string>
+            <string>System.Management.Automation.Internal.CommonParameters+ValidateVariableName</string>
+          </Attributes>
+          <Aliases>
+            <string>iv</string>
+          </Aliases>
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+      </Parameters>
+      <Examples>
+        <Example>
+          <Name>Basic example</Name>
+          <Cmd>Remove-TcmPublishTransactions -Before 20.07.12</Cmd>
+          <Description>Deletes all publish transactions finished before 20.07.12. If there are no publish transactions which were finished before 20.07.12, this command returns to the command prompt without displaying anything.</Description>
+        </Example>
+      </Examples>
+      <RelatedLinks />
+      <SupportInformation>
+        <ADChecked>false</ADChecked>
+        <RsatChecked>false</RsatChecked>
+        <Ps2Checked>false</Ps2Checked>
+        <Ps3Checked>false</Ps3Checked>
+        <Ps4Checked>false</Ps4Checked>
+        <WinXpChecked>false</WinXpChecked>
+        <WinVistaChecked>false</WinVistaChecked>
+        <Win7Checked>false</Win7Checked>
+        <Win8Checked>false</Win8Checked>
+        <Win81Checked>false</Win81Checked>
+        <Win2003Checked>false</Win2003Checked>
+        <Win2003StdChecked>false</Win2003StdChecked>
+        <Win2003EEChecked>false</Win2003EEChecked>
+        <Win2003DCChecked>false</Win2003DCChecked>
+        <Win2008Checked>false</Win2008Checked>
+        <Win2008StdChecked>false</Win2008StdChecked>
+        <Win2008EEChecked>false</Win2008EEChecked>
+        <Win2008DCChecked>false</Win2008DCChecked>
+        <Win2008R2Checked>false</Win2008R2Checked>
+        <Win2008R2StdChecked>false</Win2008R2StdChecked>
+        <Win2008R2EEChecked>false</Win2008R2EEChecked>
+        <Win2008R2DCChecked>false</Win2008R2DCChecked>
+        <Win2012Checked>false</Win2012Checked>
+        <Win2012StdChecked>false</Win2012StdChecked>
+        <Win2012DCChecked>false</Win2012DCChecked>
+        <Win2012R2Checked>false</Win2012R2Checked>
+        <Win2012R2StdChecked>false</Win2012R2StdChecked>
+        <Win2012R2DCChecked>false</Win2012R2DCChecked>
+      </SupportInformation>
+      <Publish>false</Publish>
+    </CmdletObject>
+    <CmdletObject>
+      <Name>Remove-TcmQueueMessages</Name>
+      <Verb>Remove</Verb>
+      <Noun>TcmQueueMessages</Noun>
+      <GeneralHelp>
+        <Synopsis>Purges specified (or all if not) SDL Web Content Manager queues (Search, Publish, Workflow Agent, Deploy, Batch) messages.</Synopsis>
+        <Description>The Remove-TcmQueueMessages cmdlet deletes messages from the Publish Queue, Deploy Queue, Search Queue, Batch Queue and/or Workflow Queue. You can use the parameter of this cmdlet to specify queues, if not specified - purging process will be performed for all queues.
+User must be System Administrator, if not - PermissionDenied exception will occur.
+You need to confirm an execution of this operation.</Description>
+        <Notes />
+        <InputType>System.String[]</InputType>
+        <InputUrl />
+        <InputTypeDescription>You can pipe a string array that contains Tridion.ContentManager.CoreService.Client.PredefinedQueue enum items (value or name) for which purging process must be performed.
+</InputTypeDescription>
+        <ReturnType />
+        <ReturnUrl />
+        <ReturnTypeDescription />
+      </GeneralHelp>
+      <Syntax>
+        <string>Remove-TcmQueueMessages [[-Queues] &lt;String[]&gt;] [-Server &lt;String&gt;] [-Port &lt;Int32&gt;] [-TimeOut &lt;Int32&gt;] [-InformationAction &lt;ActionPreference&gt;] [-InformationVariable &lt;String&gt;] [-WhatIf] [-Confirm]</string>
+      </Syntax>
+      <Parameters>
+        <ParameterDescription>
+          <Name>Queues</Name>
+          <Type>String[]</Type>
+          <AcceptsArray>true</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>true</Positional>
+          <Position>0</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>Specifies the list of a Tridion.ContentManager.CoreService.Client.PredefinedQueue enum for which will be performed purging process, if not specified - the purging process will be performed for all queues.</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>Server</Name>
+          <Type>String</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>The TCM server name of the remote server. It will be used as part of the CoreService URL net.tcp://{Server}:{Port}/CoreService/{Endpoint}</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>Port</Name>
+          <Type>Int32</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>The Port on which net.tcp endpoint is hosted. Default value is 2660. This value will be used as part of the CoreService URL net.tcp://{Server}:{Port}/CoreService/{Endpoint}</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>TimeOut</Name>
+          <Type>Int32</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>Sets the send and receive timeout (in minutes) of the Core Service NetTcp endpoint.</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>WhatIf</Name>
+          <Type>SwitchParameter</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.AliasAttribute</string>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases>
+            <string>wi</string>
+          </Aliases>
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>Confirm</Name>
+          <Type>SwitchParameter</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.AliasAttribute</string>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases>
+            <string>cf</string>
+          </Aliases>
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>WarningAction</Name>
+          <Type>actionpreference</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes />
+          <Aliases />
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>WarningVariable</Name>
+          <Type>string</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes />
+          <Aliases />
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>InformationAction</Name>
+          <Type>ActionPreference</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+            <string>System.Management.Automation.AliasAttribute</string>
+          </Attributes>
+          <Aliases>
+            <string>infa</string>
+          </Aliases>
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>InformationVariable</Name>
+          <Type>String</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+            <string>System.Management.Automation.AliasAttribute</string>
+            <string>System.Management.Automation.Internal.CommonParameters+ValidateVariableName</string>
+          </Attributes>
+          <Aliases>
+            <string>iv</string>
+          </Aliases>
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+      </Parameters>
+      <Examples>
+        <Example>
+          <Name>Basic example</Name>
+          <Cmd>C:\PS&gt;Remove-TcmQueueMessages -Queues PublishQueue, WorkflowAgentQueue</Cmd>
+          <Description>Remove all QueueMessages items related to PublishQueue and WorkflowAgentQueue.</Description>
+        </Example>
+      </Examples>
+      <RelatedLinks />
+      <SupportInformation>
+        <ADChecked>false</ADChecked>
+        <RsatChecked>false</RsatChecked>
+        <Ps2Checked>false</Ps2Checked>
+        <Ps3Checked>false</Ps3Checked>
+        <Ps4Checked>false</Ps4Checked>
+        <WinXpChecked>false</WinXpChecked>
+        <WinVistaChecked>false</WinVistaChecked>
+        <Win7Checked>false</Win7Checked>
+        <Win8Checked>false</Win8Checked>
+        <Win81Checked>false</Win81Checked>
+        <Win2003Checked>false</Win2003Checked>
+        <Win2003StdChecked>false</Win2003StdChecked>
+        <Win2003EEChecked>false</Win2003EEChecked>
+        <Win2003DCChecked>false</Win2003DCChecked>
+        <Win2008Checked>false</Win2008Checked>
+        <Win2008StdChecked>false</Win2008StdChecked>
+        <Win2008EEChecked>false</Win2008EEChecked>
+        <Win2008DCChecked>false</Win2008DCChecked>
+        <Win2008R2Checked>false</Win2008R2Checked>
+        <Win2008R2StdChecked>false</Win2008R2StdChecked>
+        <Win2008R2EEChecked>false</Win2008R2EEChecked>
+        <Win2008R2DCChecked>false</Win2008R2DCChecked>
+        <Win2012Checked>false</Win2012Checked>
+        <Win2012StdChecked>false</Win2012StdChecked>
+        <Win2012DCChecked>false</Win2012DCChecked>
+        <Win2012R2Checked>false</Win2012R2Checked>
+        <Win2012R2StdChecked>false</Win2012R2StdChecked>
+        <Win2012R2DCChecked>false</Win2012R2DCChecked>
+      </SupportInformation>
+      <Publish>false</Publish>
+    </CmdletObject>
+    <CmdletObject>
+      <Name>Sync-TcmSearchIndex</Name>
+      <Verb>Sync</Verb>
+      <Noun>TcmSearchIndex</Noun>
+      <GeneralHelp>
+        <Synopsis>Synchronizes (part of) the SDL Web Content Manager full-text index.</Synopsis>
+        <Description>The cmdlet Sync-TcmSearchIndex synchronizes (part of) the SDL Web Content Manager full-text index.</Description>
+        <Notes />
+        <InputType />
+        <InputUrl />
+        <InputTypeDescription />
+        <ReturnType />
+        <ReturnUrl />
+        <ReturnTypeDescription />
+      </GeneralHelp>
+      <Syntax>
+        <string>Sync-TcmSearchIndex [[-TcmRepositoryIds] &lt;String[]&gt;] [-Server &lt;String&gt;] [-Port &lt;Int32&gt;] [-TimeOut &lt;Int32&gt;] [-InformationAction &lt;ActionPreference&gt;] [-InformationVariable &lt;String&gt;] [-WhatIf] [-Confirm]</string>
+      </Syntax>
+      <Parameters>
+        <ParameterDescription>
+          <Name>TcmRepositoryIds</Name>
+          <Type>String[]</Type>
+          <AcceptsArray>true</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>true</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>true</Positional>
+          <Position>0</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>Repository identifiers for which full-text index synchronization must be performed. If no identifier is specified then full synchronization will be performed.</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>Server</Name>
+          <Type>String</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>The TCM server name of the remote server. It will be used as part of the CoreService URL net.tcp://{Server}:{Port}/CoreService/{Endpoint}</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>Port</Name>
+          <Type>Int32</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>The Port on which net.tcp endpoint is hosted. Default value is 2660. This value will be used as part of the CoreService URL net.tcp://{Server}:{Port}/CoreService/{Endpoint}</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>TimeOut</Name>
+          <Type>Int32</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>Sets the send and receive timeout (in minutes) of the Core Service NetTcp endpoint.</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>WhatIf</Name>
+          <Type>SwitchParameter</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.AliasAttribute</string>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases>
+            <string>wi</string>
+          </Aliases>
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>Confirm</Name>
+          <Type>SwitchParameter</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.AliasAttribute</string>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases>
+            <string>cf</string>
+          </Aliases>
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>WarningAction</Name>
+          <Type>actionpreference</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes />
+          <Aliases />
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>WarningVariable</Name>
+          <Type>string</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes />
+          <Aliases />
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>InformationAction</Name>
+          <Type>ActionPreference</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+            <string>System.Management.Automation.AliasAttribute</string>
+          </Attributes>
+          <Aliases>
+            <string>infa</string>
+          </Aliases>
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>InformationVariable</Name>
+          <Type>String</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+            <string>System.Management.Automation.AliasAttribute</string>
+            <string>System.Management.Automation.Internal.CommonParameters+ValidateVariableName</string>
+          </Attributes>
+          <Aliases>
+            <string>iv</string>
+          </Aliases>
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+      </Parameters>
+      <Examples />
+      <RelatedLinks />
+      <SupportInformation>
+        <ADChecked>false</ADChecked>
+        <RsatChecked>false</RsatChecked>
+        <Ps2Checked>false</Ps2Checked>
+        <Ps3Checked>false</Ps3Checked>
+        <Ps4Checked>false</Ps4Checked>
+        <WinXpChecked>false</WinXpChecked>
+        <WinVistaChecked>false</WinVistaChecked>
+        <Win7Checked>false</Win7Checked>
+        <Win8Checked>false</Win8Checked>
+        <Win81Checked>false</Win81Checked>
+        <Win2003Checked>false</Win2003Checked>
+        <Win2003StdChecked>false</Win2003StdChecked>
+        <Win2003EEChecked>false</Win2003EEChecked>
+        <Win2003DCChecked>false</Win2003DCChecked>
+        <Win2008Checked>false</Win2008Checked>
+        <Win2008StdChecked>false</Win2008StdChecked>
+        <Win2008EEChecked>false</Win2008EEChecked>
+        <Win2008DCChecked>false</Win2008DCChecked>
+        <Win2008R2Checked>false</Win2008R2Checked>
+        <Win2008R2StdChecked>false</Win2008R2StdChecked>
+        <Win2008R2EEChecked>false</Win2008R2EEChecked>
+        <Win2008R2DCChecked>false</Win2008R2DCChecked>
+        <Win2012Checked>false</Win2012Checked>
+        <Win2012StdChecked>false</Win2012StdChecked>
+        <Win2012DCChecked>false</Win2012DCChecked>
+        <Win2012R2Checked>false</Win2012R2Checked>
+        <Win2012R2StdChecked>false</Win2012R2StdChecked>
+        <Win2012R2DCChecked>false</Win2012R2DCChecked>
+      </SupportInformation>
+      <Publish>false</Publish>
+    </CmdletObject>
+    <CmdletObject>
+      <Name>Get-TcmUndoPackages</Name>
+      <Verb>Get</Verb>
+      <Noun>TcmUndoPackages</Noun>
+      <GeneralHelp>
+        <Synopsis>Gets a list of all undo packages stored in the system's application data.</Synopsis>
+        <Description>Undo packages can be stored either on the local file system (by default) or in application data in the scaled out scenario. This cmdlet shows only packages stored in application data.</Description>
+        <Notes>In order to enable storing undo packages in application data, add useBinaryContentProvider="true" to the importExport section in the Tridion.ContentManager.config.</Notes>
+        <InputType />
+        <InputUrl />
+        <InputTypeDescription />
+        <ReturnType>IEnumerable&lt;UndoPackageInfo&gt;</ReturnType>
+        <ReturnUrl />
+        <ReturnTypeDescription>List of objects with metadata about undo packages that includes package ID, creation date, number of actions to undo, TCM URI of the user who performed import, import description.</ReturnTypeDescription>
+      </GeneralHelp>
+      <Syntax>
+        <string>Get-TcmUndoPackages [-Server &lt;String&gt;] [-Port &lt;Int32&gt;] [-TimeOut &lt;Int32&gt;] [-InformationAction &lt;ActionPreference&gt;] [-InformationVariable &lt;String&gt;]</string>
+      </Syntax>
+      <Parameters>
+        <ParameterDescription>
+          <Name>Server</Name>
+          <Type>String</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>The TCM server name of the remote server. It will be used as part of the CoreService URL net.tcp://{Server}:{Port}/CoreService/{Endpoint}</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>Port</Name>
+          <Type>Int32</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>The Port on which net.tcp endpoint is hosted. Default value is 2660. This value will be used as part of the CoreService URL net.tcp://{Server}:{Port}/CoreService/{Endpoint}</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>TimeOut</Name>
+          <Type>Int32</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>Sets the send and receive timeout (in minutes) of the Core Service NetTcp endpoint.</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>InformationAction</Name>
+          <Type>ActionPreference</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+            <string>System.Management.Automation.AliasAttribute</string>
+          </Attributes>
+          <Aliases>
+            <string>infa</string>
+          </Aliases>
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>InformationVariable</Name>
+          <Type>String</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+            <string>System.Management.Automation.AliasAttribute</string>
+            <string>System.Management.Automation.Internal.CommonParameters+ValidateVariableName</string>
+          </Attributes>
+          <Aliases>
+            <string>iv</string>
+          </Aliases>
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+      </Parameters>
+      <Examples>
+        <Example>
+          <Name>Example</Name>
+          <Cmd>C:\PS&gt; Get-TcmUndoPackages | Format-Table</Cmd>
+          <Description>Outputs list of packages as a readable table.</Description>
+        </Example>
+      </Examples>
+      <RelatedLinks />
+      <SupportInformation>
+        <ADChecked>false</ADChecked>
+        <RsatChecked>false</RsatChecked>
+        <Ps2Checked>false</Ps2Checked>
+        <Ps3Checked>false</Ps3Checked>
+        <Ps4Checked>false</Ps4Checked>
+        <WinXpChecked>false</WinXpChecked>
+        <WinVistaChecked>false</WinVistaChecked>
+        <Win7Checked>false</Win7Checked>
+        <Win8Checked>false</Win8Checked>
+        <Win81Checked>false</Win81Checked>
+        <Win2003Checked>false</Win2003Checked>
+        <Win2003StdChecked>false</Win2003StdChecked>
+        <Win2003EEChecked>false</Win2003EEChecked>
+        <Win2003DCChecked>false</Win2003DCChecked>
+        <Win2008Checked>false</Win2008Checked>
+        <Win2008StdChecked>false</Win2008StdChecked>
+        <Win2008EEChecked>false</Win2008EEChecked>
+        <Win2008DCChecked>false</Win2008DCChecked>
+        <Win2008R2Checked>false</Win2008R2Checked>
+        <Win2008R2StdChecked>false</Win2008R2StdChecked>
+        <Win2008R2EEChecked>false</Win2008R2EEChecked>
+        <Win2008R2DCChecked>false</Win2008R2DCChecked>
+        <Win2012Checked>false</Win2012Checked>
+        <Win2012StdChecked>false</Win2012StdChecked>
+        <Win2012DCChecked>false</Win2012DCChecked>
+        <Win2012R2Checked>false</Win2012R2Checked>
+        <Win2012R2StdChecked>false</Win2012R2StdChecked>
+        <Win2012R2DCChecked>false</Win2012R2DCChecked>
+      </SupportInformation>
+      <Publish>false</Publish>
+    </CmdletObject>
+    <CmdletObject>
+      <Name>Remove-TcmUndoPackages</Name>
+      <Verb>Remove</Verb>
+      <Noun>TcmUndoPackages</Noun>
+      <GeneralHelp>
+        <Synopsis>Removes undo packages stored in the system's application data.</Synopsis>
+        <Description>Removes one or more undo packages stored in the system's application data. Undo packages can be stored either on the local file system (by default) or in application data in the scaled out scenario. This cmdlet removes only packages stored in application data.</Description>
+        <Notes>In order to enable storing undo packages in application data, add useBinaryContentProvider="true" to the importExport section in the Tridion.ContentManager.config.</Notes>
+        <InputType />
+        <InputUrl />
+        <InputTypeDescription />
+        <ReturnType />
+        <ReturnUrl />
+        <ReturnTypeDescription />
+      </GeneralHelp>
+      <Syntax>
+        <string>Remove-TcmUndoPackages [-KeepAfter &lt;Nullable`1[DateTime]&gt;] [-PackageId &lt;String&gt;] [-Server &lt;String&gt;] [-Port &lt;Int32&gt;] [-TimeOut &lt;Int32&gt;] [-InformationAction &lt;ActionPreference&gt;] [-InformationVariable &lt;String&gt;] [-WhatIf] [-Confirm]</string>
+      </Syntax>
+      <Parameters>
+        <ParameterDescription>
+          <Name>KeepAfter</Name>
+          <Type>Nullable`1[DateTime]</Type>
+          <AcceptsArray>true</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>The date before which all undo packages are removed.</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>PackageId</Name>
+          <Type>String</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>Undo package ID to remove single specific package.</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>Server</Name>
+          <Type>String</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>The TCM server name of the remote server. It will be used as part of the CoreService URL net.tcp://{Server}:{Port}/CoreService/{Endpoint}</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>Port</Name>
+          <Type>Int32</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>The Port on which net.tcp endpoint is hosted. Default value is 2660. This value will be used as part of the CoreService URL net.tcp://{Server}:{Port}/CoreService/{Endpoint}</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>TimeOut</Name>
+          <Type>Int32</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases />
+          <Description>Sets the send and receive timeout (in minutes) of the Core Service NetTcp endpoint.</Description>
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>InformationAction</Name>
+          <Type>ActionPreference</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+            <string>System.Management.Automation.AliasAttribute</string>
+          </Attributes>
+          <Aliases>
+            <string>infa</string>
+          </Aliases>
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>InformationVariable</Name>
+          <Type>String</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.ParameterAttribute</string>
+            <string>System.Management.Automation.AliasAttribute</string>
+            <string>System.Management.Automation.Internal.CommonParameters+ValidateVariableName</string>
+          </Attributes>
+          <Aliases>
+            <string>iv</string>
+          </Aliases>
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>WhatIf</Name>
+          <Type>SwitchParameter</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.AliasAttribute</string>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases>
+            <string>wi</string>
+          </Aliases>
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+        <ParameterDescription>
+          <Name>Confirm</Name>
+          <Type>SwitchParameter</Type>
+          <AcceptsArray>false</AcceptsArray>
+          <Mandatory>false</Mandatory>
+          <Dynamic>false</Dynamic>
+          <RemainingArgs>false</RemainingArgs>
+          <Pipeline>false</Pipeline>
+          <PipelinePropertyName>false</PipelinePropertyName>
+          <Positional>false</Positional>
+          <Position>named</Position>
+          <Attributes>
+            <string>System.Management.Automation.AliasAttribute</string>
+            <string>System.Management.Automation.ParameterAttribute</string>
+          </Attributes>
+          <Aliases>
+            <string>cf</string>
+          </Aliases>
+          <Description />
+          <DefaultValue />
+          <Globbing>false</Globbing>
+        </ParameterDescription>
+      </Parameters>
+      <Examples />
+      <RelatedLinks />
+      <SupportInformation>
+        <ADChecked>false</ADChecked>
+        <RsatChecked>false</RsatChecked>
+        <Ps2Checked>false</Ps2Checked>
+        <Ps3Checked>false</Ps3Checked>
+        <Ps4Checked>false</Ps4Checked>
+        <WinXpChecked>false</WinXpChecked>
+        <WinVistaChecked>false</WinVistaChecked>
+        <Win7Checked>false</Win7Checked>
+        <Win8Checked>false</Win8Checked>
+        <Win81Checked>false</Win81Checked>
+        <Win2003Checked>false</Win2003Checked>
+        <Win2003StdChecked>false</Win2003StdChecked>
+        <Win2003EEChecked>false</Win2003EEChecked>
+        <Win2003DCChecked>false</Win2003DCChecked>
+        <Win2008Checked>false</Win2008Checked>
+        <Win2008StdChecked>false</Win2008StdChecked>
+        <Win2008EEChecked>false</Win2008EEChecked>
+        <Win2008DCChecked>false</Win2008DCChecked>
+        <Win2008R2Checked>false</Win2008R2Checked>
+        <Win2008R2StdChecked>false</Win2008R2StdChecked>
+        <Win2008R2EEChecked>false</Win2008R2EEChecked>
+        <Win2008R2DCChecked>false</Win2008R2DCChecked>
+        <Win2012Checked>false</Win2012Checked>
+        <Win2012StdChecked>false</Win2012StdChecked>
+        <Win2012DCChecked>false</Win2012DCChecked>
+        <Win2012R2Checked>false</Win2012R2Checked>
+        <Win2012R2StdChecked>false</Win2012R2StdChecked>
+        <Win2012R2DCChecked>false</Win2012R2DCChecked>
+      </SupportInformation>
+      <Publish>false</Publish>
+    </CmdletObject>
+  </Cmdlets>
+</ModuleObject>
