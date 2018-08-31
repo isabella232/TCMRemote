@@ -9,7 +9,7 @@
     <AssemblyName>Tridion.ContentManager.Automation</AssemblyName>
     <SignAssembly>true</SignAssembly>
     <DelaySign>false</DelaySign>
-    <AssemblyOriginatorKeyFile>..\..\Tridion.ContentManager.Automation.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>..\..\Shared\Tridion.ContentManager.Automation.snk</AssemblyOriginatorKeyFile>
     <AssemblyTitle>"Tridion.ContentManager.Automation"</AssemblyTitle>
     <Company>SDL Group</Company>
     <Product>Tridion.ContentManager.Automation</Product>
