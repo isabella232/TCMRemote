@@ -51,8 +51,8 @@
     <Reference Include="System.Management.Automation" />
   </ItemGroup>
   <ItemGroup>
-    <None Update="Tridion.ContentManager.Automation.dll-help.xml">
+    <Content Include="Tridion.ContentManager.Automation.dll-help.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    </Content>
   </ItemGroup>
 </Project>
