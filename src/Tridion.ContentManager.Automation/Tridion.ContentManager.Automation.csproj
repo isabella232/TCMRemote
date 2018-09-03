@@ -2,9 +2,6 @@
   <PropertyGroup>
     <TargetFramework>net462</TargetFramework>
     <Configurations>Debug;Release</Configurations>
-    <Version>9.0.0.0</Version>
-    <AssemblyVersion>9.0.0.0</AssemblyVersion>
-    <FileVersion>9.0.0.0</FileVersion>
     <RootNamespace>Tridion.ContentManager.Automation</RootNamespace>
     <AssemblyName>Tridion.ContentManager.Automation</AssemblyName>
     <SignAssembly>true</SignAssembly>
@@ -23,7 +20,7 @@
     <PackageTags>SDL,CMDLets,Automation,Powershell</PackageTags>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-      <AssemblySearchPaths>$(AssemblySearchPaths);{GAC}</AssemblySearchPaths>
+    <AssemblySearchPaths>$(AssemblySearchPaths);{GAC}</AssemblySearchPaths>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -43,8 +40,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Tridion.ContentManager.CoreService.Client" Version="9.0.0" />
-    <PackageReference Include="Tridion.Common" Version="9.0.0" />
+    <PackageReference Include="Tridion.ContentManager.CoreService.Client" Version="$(CMPackageVersion)" />
+    <PackageReference Include="Tridion.Common" Version="$(CMPackageVersion)" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.ServiceModel" />
