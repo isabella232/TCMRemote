@@ -23,6 +23,7 @@
     <PackageTags>SDL,CMDLets,Automation,Powershell</PackageTags>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+      <AssemblySearchPaths>$(AssemblySearchPaths);{GAC}</AssemblySearchPaths>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -44,9 +45,9 @@
   <ItemGroup>
     <PackageReference Include="Tridion.ContentManager.CoreService.Client" Version="9.0.0" />
     <PackageReference Include="Tridion.Common" Version="9.0.0" />
-    <PackageReference Include="System.Management.Automation" Version="6.0.4" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Management.Automation" />
   </ItemGroup>
 </Project>
