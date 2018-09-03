@@ -50,4 +50,9 @@
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Management.Automation" />
   </ItemGroup>
+  <ItemGroup>
+    <None Update="Tridion.ContentManager.Automation.dll-help.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>
