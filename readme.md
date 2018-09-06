@@ -13,6 +13,7 @@ About
 Useful maintenance tool. Use powershell command
 Import-Module Tridion.TopologyManager.Automation.dll
 to load bunch of cmdlets.
+System.Management.Automation need to be present in GAC.
 
 Branches and Contributions
 -------------
