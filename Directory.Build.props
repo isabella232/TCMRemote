@@ -9,6 +9,7 @@
     <FileVersion Condition=" '$(BUILD_BUILDID)' != ''">$(VersionPrefix).$([MSBuild]::Modulo($(BUILD_BUILDID), 65536))</FileVersion>
     <InformationalVersion>$(AssemblyVersion) $(VersionSuffix)</InformationalVersion>
 
+    <CommonPackageVersion Condition="'$(CommonPackageVersion)' == ''">9.0.0</CommonPackageVersion>
     <CMPackageVersion Condition="'$(VersionSuffix)' != ''">9.0.0-$(VersionSuffix)</CMPackageVersion>
     <CMPackageVersion Condition="'$(VersionSuffix)' == ''">9.0.0</CMPackageVersion>
   </PropertyGroup>
