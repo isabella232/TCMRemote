@@ -41,7 +41,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Tridion.ContentManager.CoreService.Client" Version="$(CMPackageVersion)" />
-    <PackageReference Include="Tridion.Common" Version="$(CMPackageVersion)" />
+    <PackageReference Include="Tridion.Common" Version="$(CommonPackageVersion)" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.ServiceModel" />
